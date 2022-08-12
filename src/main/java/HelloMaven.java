@@ -15,9 +15,11 @@ public class HelloMaven{
         //System.out.println(list.get(1));
         //System.out.println(list.get(num-1));
 
-        if(list.get(0).equals(list.get(num-2)) && list.get(1).equals(list.get(num-1))){
+        if(num-2<0){
             return true;
-        }else {
+        }else if(list.get(0).equals(list.get(num-2)) && list.get(1).equals(list.get(num-1))){
+            return false;
+        }else{
             return false;
         }
     }
