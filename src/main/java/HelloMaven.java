@@ -18,7 +18,7 @@ public class HelloMaven{
         if(num-2<0){
             return true;
         }else if(list.get(0).equals(list.get(num-2)) && list.get(1).equals(list.get(num-1))){
-            return false;
+            return true;
         }else{
             return false;
         }
