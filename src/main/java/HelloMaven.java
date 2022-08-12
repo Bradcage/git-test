@@ -5,13 +5,17 @@ import java.util.Scanner;
 public class HelloMaven{
     public static boolean Fanhui(String str){
         int num = str.length();
-        int num1 = num-1;
         List<String> list = new ArrayList<String>();
         for(int i = 0;i<num;i++){
             String ss = String.valueOf(str.charAt(i));
             list.add(ss);
         }
-        if(list.get(0) == list.get(num1-2) && list.get(1) == list.get(num1-3)){
+        //System.out.println(list.get(0));
+        //System.out.println(list.get(num-2));
+        //System.out.println(list.get(1));
+        //System.out.println(list.get(num-1));
+
+        if(list.get(0).equals(list.get(num-2)) && list.get(1).equals(list.get(num-1))){
             return true;
         }else {
             return false;
@@ -24,7 +28,7 @@ public class HelloMaven{
         Scanner in = new Scanner(System.in);
         String str;
         str = in.next();
-        Fanhui(str);
+        System.out.print(Fanhui(str));
 
     }
 }
